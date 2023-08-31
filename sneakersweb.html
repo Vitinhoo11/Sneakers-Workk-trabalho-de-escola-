@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/sneakers.css">
+  <title>Sneakers</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Sneakers Now</h1>
+      <ul class="menu">
+        <li><a href="#">Nike</a></li>
+        <li><a href="#">Puma</a></li>
+        <li><a href="#">Adidas</a></li>
+        <li><a href="#">New Balance</a></li>
+      </ul>
+      <hr>
+      <h1>Nike</h1>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTwpujS6pghI6D05w7BNgPvm4m_boy8bO27w&usqp=CAU.jpg" alt="Sneakers Collab Liverpool" width="250px"/>
+<p>Tênis Nike Collab Liverpool | R$2.500,00</p>
+<a href="">Comprar</a>
+<hr>
+<h1>Puma</h1>
+<img src="https://imgcentauro-a.akamaihd.net/480x480/M0C98752A2/tenis-puma-rs-x3-puzzle-masculino-img.jpg" alt="Puma Puzzle" width="250"/>
+<p>Tênis Puma RS-X Puzzle | R$950,00</p>
+<a href="">Comprar</a>
+<hr>
+<h1>Adidas</h1>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmBZ7uQAJ0hCzUa4AnTy5LmsfXlAJiMHyFlQ&usqp=CAU.jpg" alt="Adidas" width="250"/>
+<p>Tênis Adidas Yeezy Boost 350 | R$1.700,00</p>
+<a href="">Comprar</a>
+<hr>
+<h1>New Balance</h1>
+<img src="https://www.thenextsole.com/storage/images/BB550WT1.png" alt="New Balance" width="250"/>
+<p> Tênis New Balance 550 | R$890,00</p>
+<a href="">Comprar</a>
+      
+    </nav>
+  </header>
+
+  
+  <div class="container mt-4"></div>
+ <p><h2>Nosso contato</h2></p>
+  <p><form id="contactForm"></p>
+      <div class="form-group">
+        <label for="name">Nome:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Envie seu nome">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Envie seu email">
+      </div>
+      <div class="form-group">
+        <label for="message">Mensagem:</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Envie sua mensagem"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="submitForm()">Enviar</button>
+      <p id="submissionStatus" class="mt-2"></p>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function submitForm() {
+      document.getElementById("submissionStatus").innerHTML = "Dados enviados";
+    }
+  </script>
+</body>
+</html>
+
+
+<script>
+ 
+  $(document).ready(function(){
+    $(".menu a").hover(function(){
+      $(this).addClass("hover");
+    }, function(){
+      $(this).removeClass("hover");
+    });
+  });
+
+
+  $(document).ready(function(){
+    $(".menu a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;
+        });
+      }
+    });
+  });
+  
+</script>
